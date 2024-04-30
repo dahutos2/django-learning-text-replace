@@ -11,8 +11,6 @@ widget_textinput = forms.TextInput(
         'class': 'form-control',
     }
 )
-
-
 class TextForm(forms.Form):
     text = forms.CharField(label='',widget=widget_textarea)
     search = forms.CharField(label='検索',widget=widget_textinput)
@@ -24,10 +22,3 @@ class TextForm(forms.Form):
         if len(text) <= 5:
             raise ValidationError('テキストが短すぎます。6文字以上入力してください。')
         return data
-
-from .models import Post
-
-class PostForm(forms.ModelForm):
-    class Meta:
-        model = Post
-        fields = ['title','body']

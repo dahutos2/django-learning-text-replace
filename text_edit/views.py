@@ -4,7 +4,7 @@ from . import forms
 
 
 class Index(FormView):
-    form_class = forms.PostForm
+    form_class = forms.TextForm
     template_name = 'index.html'
     
         # フォームの入力にエラーが無かった場合に呼ばれます
