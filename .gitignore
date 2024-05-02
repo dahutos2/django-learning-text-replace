@@ -5,7 +5,6 @@
 .$*
 .history/
 *.icloud
-.vscode/
 .DS_Store
 myenv/
 
